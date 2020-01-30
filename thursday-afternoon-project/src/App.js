@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import data from './data'
+import NavBar from './Components/NavBar'
+import DisplayedItems from './Components/DisplayedItems'
 
 class App extends React.Component {
   constructor (props) {
@@ -12,13 +14,13 @@ class App extends React.Component {
     }
   }
 
-  backward () {
+  backward = () => {
     if (this.state.counter <= 1) {
       return null
     } else this.setState({counter: this.state.counter - 1})
   }
 
-  forward () {
+  forward = () => {
     if (this.state.counter >= this.state.data.length) {
       return null
     } else this.setState({counter: this.state.counter + 1})
@@ -28,15 +30,15 @@ class App extends React.Component {
     // console.log(data.length)
     return (
       <div className="App">
-        <NavBar />
-        <div>
-          <DisplayedItem />
+        <div className="navBar"><NavBar /></div>
+        <div className="box">
+          <DisplayedItems data={this.state.data[this.state.counter-1]}/>
           <div className="bottomNavBar">
-            <button className="previous navButton">{"< Previous"} onClick={this.backward}</button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button className="next navButton">{"Next >"} onClick={this.forward}</button>
+            <button className="previous navButton" onClick={this.backward}>{"< Previous"}</button>
+            <button className="edit blueButton">Edit</button>
+            <button className="delete blueButton">Delete</button>
+            <button className="new blueButton">New</button>
+            <button className="next navButton" onClick={this.forward}>{"Next >"}</button>
           </div>
         </div>
       </div>
