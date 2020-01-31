@@ -16,13 +16,13 @@ class App extends React.Component {
 
   backward = () => {
     if (this.state.counter <= 1) {
-      return null
+      this.setState({counter: this.state.data.length})
     } else this.setState({counter: this.state.counter - 1})
   }
 
   forward = () => {
     if (this.state.counter >= this.state.data.length) {
-      return null
+      this.setState({counter: 1})
     } else this.setState({counter: this.state.counter + 1})
   }
 
@@ -35,9 +35,9 @@ class App extends React.Component {
           <DisplayedItems data={this.state.data[this.state.counter-1]}/>
           <div className="bottomNavBar">
             <button className="previous navButton" onClick={this.backward}>{"< Previous"}</button>
-            <button className="edit blueButton">Edit</button>
-            <button className="delete blueButton">Delete</button>
-            <button className="new blueButton">New</button>
+            <button className="edit editingButtons">Edit</button>
+            <button className="delete editingButtons">Delete</button>
+            <button className="new editingButtons">New</button>
             <button className="next navButton" onClick={this.forward}>{"Next >"}</button>
           </div>
         </div>

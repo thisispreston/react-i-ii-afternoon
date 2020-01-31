@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #322A2F;
+  list-style: none;
 }
 
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .navBar {
@@ -13,26 +15,78 @@
   justify-content: flex-start;
   height: 10vh;
   width: 100%;
-  background-color: skyblue;
+  background-color: #C99137;
   padding-left: 50px;
+}
+
+button {
+  border: none;
 }
 
 .homeButton {
   border: none;
   font-size: 20px;
   font-weight: 800;
-  background-color: skyblue;
+  background-color: #C99137;
 }
 
 .box {
-  background-color: black;
+  background-color: #302B4A;
   padding: 50px;
   width: 100%;
   height: 70vh;
 }
 
-
 .displayBox {
   height: 50vh;
-  background-color: snow;
+  background-color: #D89FA2;
+  padding: 15px;
+}
+
+.indexNumber {
+  text-align: right;
+  font-size: 35px;
+
+}
+
+.personName {
+  margin-left: 40px;
+  font-size: 35px;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: #C99137;
+  text-decoration-style: solid;
+}
+
+.firstList {
+  margin-left: 40px;
+  font-weight: 900;
+}
+
+.secondList {
+  margin-left: 40px;
+  font-weight: 900;
+  list-style: georgian;
+}
+
+.bottomNavBar {
+  height: 110px;
+}
+
+.navButton {
+  height: 100px;
+  width: 150px;
+  font-size: 25px;
+  color: #D89FA2;
+  background-color: #302B4A;
+
+}
+
+.editingButtons {
+  background-color: #C99137;
+  border-radius: 30%;
+}
+
+.next {
+  text-align: right;
 }
